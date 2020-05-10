@@ -10,7 +10,8 @@
     "build:ui": "rmdir /s /q build && cd ../mooc_osa2/puhelinluettelo2 && npm run build --prod && xcopy /s build ..\\..\\mooc_osa3\\build",
     "deploy": "git push heroku master",
     "deploy:full": "npm run build:ui && git add . && git commit -m uibuild && npm run deploy",
-    "logs:prod": "heroku logs --tail"
+    "logs:prod": "heroku logs --tail",
+    "lint": "eslint ."
   },
   "author": "Tapio Saarnio",
   "license": "ISC",
@@ -24,6 +25,7 @@
     "morgan": "^1.10.0"
   },
   "devDependencies": {
+    "eslint": "^7.0.0",
     "nodemon": "^2.0.3"
   },
   "engines": {
